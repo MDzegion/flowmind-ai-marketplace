@@ -5,7 +5,7 @@ import {
     MAYAR_API_KEY,
     MAYAR_API_BASE,
     APP_URL,
-} from "../../_lib";
+} from "../../_lib.js";
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
     if (req.method !== "POST") {

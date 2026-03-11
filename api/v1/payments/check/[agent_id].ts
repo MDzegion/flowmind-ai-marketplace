@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { supabase, MAYAR_API_KEY } from "../../../_lib";
+import { supabase, MAYAR_API_KEY } from "../../../_lib.js";
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
     if (req.method !== "GET") {

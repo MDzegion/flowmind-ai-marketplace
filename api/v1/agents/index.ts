@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { supabase, PRIMARY_MODEL, seedAgentsIfEmpty } from "../../_lib";
+import { supabase, PRIMARY_MODEL, seedAgentsIfEmpty } from "../../_lib.js";
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
     // ── GET /api/v1/agents — list all active agents ──
