@@ -50,7 +50,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     try {
         const expiredAt = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString();
 
-        const mayarRes = await fetch(`${MAYAR_API_BASE}/payment`, {
+        const mayarRes = await fetch(`${MAYAR_API_BASE}/payment/create`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -60,7 +60,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
                 name: `FlowMind - ${agent.name}`,
                 email,
                 amount: agent.price,
-                description: `Pembayaran untuk AI Agent: ${agent.name}`,
+                description: `Pembayaran AI Agent: ${agent.name}`,
+                mobile: "081111111111",
                 redirectURL: `${APP_URL}?paid=${agent_id}`,
                 expiredAt,
             }),
