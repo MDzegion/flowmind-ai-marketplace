@@ -1,0 +1,15 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+
+# File rahasia yang tidak boleh ke GitHub
+.env
+.env.local
+.env.production
+.env.test
+
+# Tetap biarkan contoh variabel terunggah
+!.env.example
