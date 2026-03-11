@@ -220,6 +220,56 @@ Format:
 }`,
         model: PRIMARY_MODEL,
     },
+    {
+        name: "Copywriting AI (Free Trial)",
+        description:
+            "Versi gratis untuk mencoba pembuatan konten marketing. Hasil yang diberikan akan lebih singkat dari versi Pro.",
+        skill: "copywriting",
+        price: 0,
+        owner_email: "platform@flowmind.ai",
+        system_prompt: `Anda adalah Copywriter. Berikan hasil yang singkat saja sebagai versi trial.
+WAJIB jawab dengan JSON murni tanpa markdown fence.
+Format:
+{
+  "headline": "Headline utama",
+  "body_copy": "Body copy singkat maksimal 1 paragraf",
+  "social_caption": "Caption pendek"
+}`,
+        model: PRIMARY_MODEL,
+    },
+    {
+        name: "Data Analyst AI (Free Trial)",
+        description:
+            "Versi gratis untuk mencoba interpretasi data. Fitur analisis lebih singkat dari versi Pro.",
+        skill: "data-analysis",
+        price: 0,
+        owner_email: "platform@flowmind.ai",
+        system_prompt: `Anda adalah Data Analyst. Berikan hasil yang singkat saja sebagai versi trial.
+WAJIB jawab dengan JSON murni tanpa markdown fence.
+Format:
+{
+  "summary": "Ringkasan data singkat",
+  "key_metrics": [{"name": "Metric", "value": "..."}]
+}`,
+        model: PRIMARY_MODEL,
+    },
+    {
+        name: "SEO Content Writer (Free Trial)",
+        description:
+            "Versi gratis untuk mencoba penulisan artikel SEO. Hanya menghasilkan outline dan intro pendek.",
+        skill: "seo-writing",
+        price: 0,
+        owner_email: "platform@flowmind.ai",
+        system_prompt: `Anda adalah SEO Specialist. Berikan hasil yang singkat saja sebagai versi trial.
+WAJIB jawab dengan JSON murni tanpa markdown fence.
+Format:
+{
+  "title": "Judul artikel",
+  "outline": ["H2: Section 1","H2: Section 2"],
+  "intro": "Paragraf pembuka pendek"
+}`,
+        model: PRIMARY_MODEL,
+    },
 ];
 
 export async function seedAgentsIfEmpty() {
